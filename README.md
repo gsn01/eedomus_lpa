@@ -48,7 +48,9 @@ Les différentes informations possibles retournées par les Xpath suivants :
 - ```/parkings/parking/nom``` : Le nom du parking
 - ```/parkings/parking/places``` : Le nombre de places disponibles
 - ```/parkings/parking/dispo``` : Indicateur de disponibilité (valeurs : ```libre``` ou ```limite``` ou ```complet```)
-	La valeur ```limite```indique que le nombre de places disponibles est inférieur au paramètre ```seuil```.
+- 	La valeur ```libre``` indique que le nombre de places disponibles est supérieur au seuil indiqué (10 par défaut).
+- 	La valeur ```limite``` indique que le nombre de places disponibles est compris entre 0 et le paramètre ```seuil```.
+- 	La valeur ```complet``` indique que le nombre de places disponibles est égal à 0.
 
 ## Un exemple d'exploitation avec l'eedomus
 
