@@ -48,9 +48,9 @@ Les différentes informations possibles retournées par les Xpath suivants :
 - ```/parkings/parking/nom``` : Le nom du parking
 - ```/parkings/parking/places``` : Le nombre de places disponibles
 - ```/parkings/parking/dispo``` : Indicateur de disponibilité (valeurs : ```libre``` ou ```limite``` ou ```complet```)
-- 	La valeur ```libre``` indique que le nombre de places disponibles est supérieur au seuil indiqué (10 par défaut).
-- 	La valeur ```limite``` indique que le nombre de places disponibles est compris entre 0 et le paramètre ```seuil```.
-- 	La valeur ```complet``` indique que le nombre de places disponibles est égal à 0.
+	* 	La valeur ```libre``` indique que le nombre de places disponibles est supérieur au seuil indiqué (10 par défaut).
+	* 	La valeur ```limite``` indique que le nombre de places disponibles est compris entre 0 et le paramètre ```seuil```.
+	* 	La valeur ```complet``` indique que le nombre de places disponibles est égal à 0.
 
 ## Un exemple d'exploitation avec l'eedomus
 
@@ -71,6 +71,7 @@ Pour la disponibilité, le capteur doit être de type ```Liste de Valeurs```. Vo
 Exemple de mise en oeuvre :
 ![places](places.png "Places") ![dispo](dispo.png "dispo")
 
+---
 ## Notes sur les caractères accentués
 
 Dans cette première version, les caractères accentués inclus dans les noms de parking sont correctement restitués dans le résultat XML. <br>
@@ -82,3 +83,5 @@ Pour cela :
 - cliquer sur le bouton Tester
 - la liste des parkings disponibles apparaît dans la fenêtre "Utiliser le résultat XML"
 - il suffit alors de copier/coller le nom du parking au sein du chemin Xpath du capteur
+
+## Enjoy
