@@ -64,7 +64,8 @@ Renseigner les paramètres suivants :
 
 Pour la disponibilité, le capteur doit être de type ```Liste de Valeurs```. Voici un exemple de valeurs.
 
-![valeurs](valeurs.png "Valeurs")
+![valeurs](valeurs.png "Valeurs")<br/>
+
 Exemple de mise en oeuvre :
 ![places](places.png "Places") ![dispo](dispo.png "dispo")
 
