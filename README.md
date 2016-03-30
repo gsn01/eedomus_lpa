@@ -13,11 +13,11 @@ Pratique pour être alerté quand un parking est plein et pouvoir en choisir un 
 ## Tester
 Ce script peut ensuite être testé au travers du lien suivant dans le navigateur
 
-	http://[ip_de_votre_box]/script/?exec=lpa.php
+	http://[ip_de_votre_box]/script/?exec=lpa.php&seuil=100
 
-où il faut remplacer *[ip_de_votre_box]* par l'IP de votre Box *eedomus*
+où il faut remplacer *[ip_de_votre_box]* par l'IP de votre Box *eedomus*. Le paramètre ```seuil``` est optionnel. Par défaut, il est positionné à la valeur 10.
 
-Exemple :	http://192.168.1.2/script/?exec=lpa.php
+Exemple :	http://192.168.1.2/script/?exec=lpa.php&seuil=100
 
 ## Résultat
 Le résultat est au format XML.
@@ -47,7 +47,8 @@ Les différentes informations possibles retournées par les Xpath suivants :
 
 - ```/parkings/parking/nom``` : Le nom du parking
 - ```/parkings/parking/places``` : Le nombre de places disponibles
-- ```/parkings/parking/dispo``` : Indicateur de disponibilité (valeurs : ```libre``` ou ```complet```)
+- ```/parkings/parking/dispo``` : Indicateur de disponibilité (valeurs : ```libre``` ou ```limite``` ou ```complet```)
+	La valeur ```limite```indique que le nombre de places disponibles est inférieur au paramètre ```seuil```.
 
 ## Un exemple d'exploitation avec l'eedomus
 
@@ -57,7 +58,7 @@ Renseigner les paramètres suivants :
 
 - Unité : ```pl.```
 - Type de données : ```Nombre décimal```
-- URL de la requête : ```http://localhost/script/?exec=lpa.php
+- URL de la requête : ```http://localhost/script/?exec=lpa.php&seuil=30```
 - Chemin XPATH : ```/parkings/parking[nom='Gare Part-Dieu']/places```
 - Fréquence de la requête : ```60```
 
