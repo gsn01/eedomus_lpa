@@ -11,7 +11,7 @@ function sdk_decode_ligne ( $ligne) {
 // Exemple : Saint Antoine<br><span id='sp1'><span class='sli'>247 places libres</span></span></td>
 // Retour : array(nom => 'Saint Antoine',places => 247)
 	$tab = sdk_multiexplode ( array('<','>',' places'), $ligne );
-	if ( $tab[6] == 'complet' ) $dispo = 0; else $places = $tab[6];
+	if ( $tab[6] == 'complet' ) $places = 0; else $places = $tab[6];
 	return array( "nom" => $tab[0], "places" => $places);
 }
 
